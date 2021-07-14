@@ -3,7 +3,6 @@ import pygame
 import random
 from pygame import mixer #mixer is a class that helps us to handle music like loading the music , repeating the music etc.,
 
-
 #initialize pygame
 pygame.init()
 
