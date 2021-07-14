@@ -6,7 +6,6 @@ from pygame import mixer #mixer is a class that helps us to handle music like lo
 #initialize pygame
 pygame.init()
 
-
 #Create a screen
 screen = pygame.display.set_mode((800,600)) #(800, 600) indicates (wwidth, height) of screen
 
@@ -70,7 +69,6 @@ def Fire_Bullet(x,y):
     Bullet_State = "Fire"
     screen.blit(BulletImage, (BulletX + 8, BulletY))
 
-
 # Collision
 def isCollision(EnemyX, EnemyY, BulletX, BulletY):
     #if BulletY == (EnemyY + 48) and (BulletX == (EnemyX + 48) or BulletX == (EnemyX - 48)):
@@ -80,7 +78,6 @@ def isCollision(EnemyX, EnemyY, BulletX, BulletY):
     if distance <= 30 :#30 is less than the size of the enemy
         return True
     return False
-
 
 #Score
 Score_value = 0
@@ -133,7 +130,6 @@ while Running:
                 PlayerX_Change = 0.0
 
 
-
     #Checking player boundaries and make sure that the player is inside the boudaries
     #Player Movement
     PlayerX += PlayerX_Change
@@ -174,15 +170,12 @@ while Running:
     
     
     #Bullet Movement
-    
     if Bullet_State == 'Fire':
         Fire_Bullet(BulletX, BulletY)
         BulletY -= BulletY_Change
         if BulletY <= 0:
             Bullet_State = 'Ready'
             BulletY = PlayerY
-
-    
 
     
     Player(PlayerX,PlayerY) #This function should always be after the screen fill because player is always drawn on the screen but not under the screen 
