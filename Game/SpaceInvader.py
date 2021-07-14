@@ -14,7 +14,6 @@ pygame.display.set_caption('My First Game')
 icon = pygame.image.load('D:\Vamsi\Documents\Python\Game\GameIcon.png')
 pygame.display.set_icon(icon)
 
-
 #Player
 PlayerImage = pygame.image.load("D:\Vamsi\Documents\Python\Game\Fighter-48.png")
 PlayerX = 360
@@ -129,7 +128,6 @@ while Running:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 PlayerX_Change = 0.0
 
-
     #Checking player boundaries and make sure that the player is inside the boudaries
     #Player Movement
     PlayerX += PlayerX_Change
@@ -167,8 +165,7 @@ while Running:
             EnemyY[i] = random.randint(0,100) 
         
         Enemy(EnemyX[i], EnemyY[i])
-    
-    
+        
     #Bullet Movement
     if Bullet_State == 'Fire':
         Fire_Bullet(BulletX, BulletY)
